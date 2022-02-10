@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,6 @@
 		B48C2F2237830AAD22EB23F5 /* Pods_RxFlowWithReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */; };
 		F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22527B5DC8800152676 /* AppDelegate.swift */; };
 		F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22727B5DC8800152676 /* SceneDelegate.swift */; };
-		F7A5B22A27B5DC8800152676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22927B5DC8800152676 /* ViewController.swift */; };
-		F7A5B22D27B5DC8800152676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A5B22B27B5DC8800152676 /* Main.storyboard */; };
 		F7A5B22F27B5DC8A00152676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A5B22E27B5DC8A00152676 /* Assets.xcassets */; };
 		F7A5B23227B5DC8A00152676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A5B23027B5DC8A00152676 /* LaunchScreen.storyboard */; };
 		F7A5B23D27B5DC8A00152676 /* RxFlowWithReactorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B23C27B5DC8A00152676 /* RxFlowWithReactorKitTests.swift */; };
@@ -46,8 +44,6 @@
 		F7A5B22227B5DC8800152676 /* RxFlowWithReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxFlowWithReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5B22527B5DC8800152676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A5B22727B5DC8800152676 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7A5B22927B5DC8800152676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F7A5B22C27B5DC8800152676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7A5B22E27B5DC8A00152676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7A5B23127B5DC8A00152676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7A5B23327B5DC8A00152676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +90,6 @@
 				57140E7C42338B2CE2B62E7B /* Pods-RxFlowWithReactorKitTests.debug.xcconfig */,
 				F25C318A4F3C29B4BC5B6174 /* Pods-RxFlowWithReactorKitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,13 +127,8 @@
 		F7A5B22427B5DC8800152676 /* RxFlowWithReactorKit */ = {
 			isa = PBXGroup;
 			children = (
-				F7A5B22527B5DC8800152676 /* AppDelegate.swift */,
-				F7A5B22727B5DC8800152676 /* SceneDelegate.swift */,
-				F7A5B22927B5DC8800152676 /* ViewController.swift */,
-				F7A5B22B27B5DC8800152676 /* Main.storyboard */,
-				F7A5B22E27B5DC8A00152676 /* Assets.xcassets */,
-				F7A5B23027B5DC8A00152676 /* LaunchScreen.storyboard */,
-				F7A5B23327B5DC8A00152676 /* Info.plist */,
+				F7A5B25627B5DD5A00152676 /* Resources */,
+				F7A5B25527B5DD5500152676 /* Sources */,
 			);
 			path = RxFlowWithReactorKit;
 			sourceTree = "<group>";
@@ -159,6 +149,33 @@
 				F7A5B24927B5DC8A00152676 /* Info.plist */,
 			);
 			path = RxFlowWithReactorKitUITests;
+			sourceTree = "<group>";
+		};
+		F7A5B25527B5DD5500152676 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B25727B5DD6900152676 /* Core */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F7A5B25627B5DD5A00152676 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B22E27B5DC8A00152676 /* Assets.xcassets */,
+				F7A5B23027B5DC8A00152676 /* LaunchScreen.storyboard */,
+				F7A5B23327B5DC8A00152676 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F7A5B25727B5DD6900152676 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B22527B5DC8800152676 /* AppDelegate.swift */,
+				F7A5B22727B5DC8800152676 /* SceneDelegate.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +287,6 @@
 			files = (
 				F7A5B23227B5DC8A00152676 /* LaunchScreen.storyboard in Resources */,
 				F7A5B22F27B5DC8A00152676 /* Assets.xcassets in Resources */,
-				F7A5B22D27B5DC8800152676 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7A5B22A27B5DC8800152676 /* ViewController.swift in Sources */,
 				F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
 			);
@@ -414,14 +429,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F7A5B22B27B5DC8800152676 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7A5B22C27B5DC8800152676 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F7A5B23027B5DC8A00152676 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -556,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RxFlowWithReactorKit/Info.plist;
+				INFOPLIST_FILE = RxFlowWithReactorKit/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RxFlowWithReactorKit/Info.plist;
+				INFOPLIST_FILE = RxFlowWithReactorKit/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
