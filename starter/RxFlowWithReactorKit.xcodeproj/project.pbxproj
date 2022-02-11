@@ -24,6 +24,10 @@
 		F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B28227B5E05800152676 /* AnimationTransition.swift */; };
 		F7A5B28D27B5E07A00152676 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B28B27B5E07A00152676 /* NetworkManager.swift */; };
 		F7A5B28E27B5E07A00152676 /* TestNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B28C27B5E07A00152676 /* TestNetworkManager.swift */; };
+		F7A5B29427B5E09F00152676 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29027B5E09F00152676 /* NetworkService.swift */; };
+		F7A5B29527B5E09F00152676 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29127B5E09F00152676 /* ServiceProvider.swift */; };
+		F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29227B5E09F00152676 /* BaseService.swift */; };
+		F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29327B5E09F00152676 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		F7A5B28227B5E05800152676 /* AnimationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTransition.swift; sourceTree = "<group>"; };
 		F7A5B28B27B5E07A00152676 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F7A5B28C27B5E07A00152676 /* TestNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNetworkManager.swift; sourceTree = "<group>"; };
+		F7A5B29027B5E09F00152676 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F7A5B29127B5E09F00152676 /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		F7A5B29227B5E09F00152676 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		F7A5B29327B5E09F00152676 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +180,7 @@
 		F7A5B25527B5DD5500152676 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F7A5B28F27B5E09E00152676 /* Services */,
 				F7A5B28A27B5E07A00152676 /* Network */,
 				F7A5B27727B5E05800152676 /* Common */,
 				F7A5B25727B5DD6900152676 /* Core */,
@@ -251,6 +260,17 @@
 				F7A5B28C27B5E07A00152676 /* TestNetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F7A5B28F27B5E09E00152676 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B29027B5E09F00152676 /* NetworkService.swift */,
+				F7A5B29127B5E09F00152676 /* ServiceProvider.swift */,
+				F7A5B29227B5E09F00152676 /* BaseService.swift */,
+				F7A5B29327B5E09F00152676 /* LoginService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,12 +491,16 @@
 				F7A5B28327B5E05800152676 /* UIView+safeArea.swift in Sources */,
 				F7A5B28D27B5E07A00152676 /* NetworkManager.swift in Sources */,
 				F7A5B28E27B5E07A00152676 /* TestNetworkManager.swift in Sources */,
+				F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
 				F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */,
+				F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */,
 				F7A5B28827B5E05800152676 /* Models.swift in Sources */,
 				F7A5B28527B5E05800152676 /* Observable+Extensions.swift in Sources */,
 				F7A5B28727B5E05800152676 /* ActivityIndicator.swift in Sources */,
 				F7A5B28627B5E05800152676 /* UIViewController+Rx.swift in Sources */,
+				F7A5B29527B5E09F00152676 /* ServiceProvider.swift in Sources */,
+				F7A5B29427B5E09F00152676 /* NetworkService.swift in Sources */,
 				F7A5B28427B5E05800152676 /* Cell+ReusableID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
