@@ -27,7 +27,7 @@ struct AppStepper: Stepper {
 	}
 }
 
-final class AppFLow: Flow {
+final class AppFlow: Flow {
 	var root: Presentable {
 		return self.rootWindow
 	}
