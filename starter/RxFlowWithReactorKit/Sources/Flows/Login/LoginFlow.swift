@@ -25,6 +25,23 @@ final class LoginFlow: Flow {
 	}
 	
 	func navigate(to step: Step) -> FlowContributors {
-		return .none
+		guard let step = step.asSampleStep else { return .none }
+		
+		switch step {
+			case .loginIsRequired:
+				return coordinateToLogin()
+			case .loginIsCompleted:
+				return .end(forwardToParentFlowWithStep: SampleStep.mainTabBarIsRequired)
+			default:
+				return .none
+		}
+	}
+	
+	private func coordinateToLogin() -> FlowContributors {
+		let reactor = LoginReactor(dependency: .init(provider: provider))
+		let vc = LoginVC(with: reactor)
+		self.rootViewController.pushViewController(vc, animated: true)
+		return .one(flowContributor: .contribute(withNextPresentable: vc,
+																						 withNextStepper: reactor))
 	}
 }
