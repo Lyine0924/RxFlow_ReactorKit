@@ -12,10 +12,10 @@ import RxSwift
 
 struct AppStepper: Stepper {
 	let steps: PublishRelay<Step> = .init()
-	private let provider: ServiceProvider
+	private let provider: ServiceProviderType
 	private let disposeBag: DisposeBag = .init()
 	
-	init(provider: ServiceProvider) {
+	init(provider: ServiceProviderType) {
 		self.provider = provider
 	}
 	
@@ -24,5 +24,30 @@ struct AppStepper: Stepper {
 			.map { $0 ? SampleStep.loginIsCompleted : SampleStep.loginIsRequired }
 			.bind(to: steps)
 			.disposed(by: self.disposeBag)
+	}
+}
+
+final class AppFLow: Flow {
+	var root: Presentable {
+		return self.rootWindow
+	}
+	
+	private let rootWindow: UIWindow
+	private let provider: ServiceProviderType
+	
+	init(
+		with window: UIWindow,
+		and provider: ServiceProviderType
+	) {
+		self.rootWindow = window
+		self.provider = provider
+	}
+	
+	deinit {
+		print("\(type(of: self)): \(#function)")
+	}
+	
+	func navigate(to step: Step) -> FlowContributors {
+		return .none
 	}
 }
