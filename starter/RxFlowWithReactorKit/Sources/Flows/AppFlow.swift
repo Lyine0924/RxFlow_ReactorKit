@@ -62,7 +62,17 @@ final class AppFlow: Flow {
 	
 	
 	private func coordinateToLoginVC() -> FlowContributors {
-		return .none
+		let loginFlow = LoginFlow(with: provider)
+		
+		Flows.use(loginFlow, when: .created) { [unowned self] root in
+			self.rootWindow.rootViewController = root
+		}
+		
+		
+		let nextStep = OneStepper(withSingleStep: SampleStep.loginIsRequired)
+		
+		return .one(flowContributor: .contribute(withNextPresentable: loginFlow,
+																						 withNextStepper: nextStep))
 	}
 	
 	private func coordinateToMainVC() -> FlowContributors {
