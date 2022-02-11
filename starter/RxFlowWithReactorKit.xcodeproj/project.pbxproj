@@ -30,6 +30,7 @@
 		F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29327B5E09F00152676 /* LoginService.swift */; };
 		F7A5B29B27B5E17800152676 /* SampleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29A27B5E17800152676 /* SampleStep.swift */; };
 		F7A5B29E27B5E9ED00152676 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29D27B5E9ED00152676 /* AppFlow.swift */; };
+		F7A5B2A027B5EC2000152676 /* Step+asSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29F27B5EC2000152676 /* Step+asSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		F7A5B29327B5E09F00152676 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F7A5B29A27B5E17800152676 /* SampleStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStep.swift; sourceTree = "<group>"; };
 		F7A5B29D27B5E9ED00152676 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		F7A5B29F27B5EC2000152676 /* Step+asSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Step+asSample.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 			children = (
 				F7A5B27927B5E05800152676 /* UIKit */,
 				F7A5B27C27B5E05800152676 /* Rx */,
+				F7A5B29F27B5EC2000152676 /* Step+asSample.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */,
 				F7A5B28327B5E05800152676 /* UIView+safeArea.swift in Sources */,
 				F7A5B28D27B5E07A00152676 /* NetworkManager.swift in Sources */,
+				F7A5B2A027B5EC2000152676 /* Step+asSample.swift in Sources */,
 				F7A5B28E27B5E07A00152676 /* TestNetworkManager.swift in Sources */,
 				F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,

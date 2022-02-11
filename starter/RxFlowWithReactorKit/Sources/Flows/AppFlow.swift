@@ -48,6 +48,24 @@ final class AppFLow: Flow {
 	}
 	
 	func navigate(to step: Step) -> FlowContributors {
+		guard let step = step.asSampleStep else { return .none }
+		
+		switch step {
+			case .loginIsRequired:
+				return coordinateToLoginVC()
+			case .mainTabBarIsRequired, .loginIsCompleted:
+				return coordinateToMainVC()
+			default:
+				return .none
+		}
+	}
+	
+	
+	private func coordinateToLoginVC() -> FlowContributors {
+		return .none
+	}
+	
+	private func coordinateToMainVC() -> FlowContributors {
 		return .none
 	}
 }
