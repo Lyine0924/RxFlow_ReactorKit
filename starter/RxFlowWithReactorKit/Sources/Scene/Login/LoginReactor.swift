@@ -13,6 +13,10 @@ import RxFlow
 import ReactorKit
 
 final class LoginReactor: Reactor, Stepper {
+	
+	struct Dependency {
+		let provider: ServiceProviderType
+	}
 
 	enum Action {
 		case loginButtonDidTap
@@ -28,10 +32,13 @@ final class LoginReactor: Reactor, Stepper {
 	
 	var steps: PublishRelay<Step> = .init()
 	
+	var dependency: Dependency
+	
 	let initialState: State
 	
-	init() {
+	init(dependency: Dependency) {
 		self.initialState = State()
+		self.dependency = dependency
 	}
 }
 
@@ -41,6 +48,10 @@ extension LoginReactor {
 	func mutate(action: Action) -> Observable<Mutation> {
 		switch action {
 			case .loginButtonDidTap:
+				self.dependency.provider.loginService.setUserLogin()
+				
+				steps.accept(SampleStep.loginIsRequired)
+				
 				return .empty()
 		}
 	}
