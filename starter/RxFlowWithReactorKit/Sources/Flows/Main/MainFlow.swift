@@ -21,11 +21,10 @@ final class MainFlow: Flow {
 	}
 	
 	let rootViewController = UITabBarController()
-	
-	private let dependency: Dependency
+	let homeFlow: HomeFlow
 	
 	init(dependency: Dependency) {
-		self.dependency = dependency
+		self.homeFlow = .init(with: dependency.provider, stepper: .init())
 	}
 	
 	func navigate(to step: Step) -> FlowContributors {
@@ -46,6 +45,19 @@ final class MainFlow: Flow {
 
 extension MainFlow {
 	private func coordinateToMainTabBar() -> FlowContributors {
-		return .none
+		
+		Flows.use(homeFlow, when: .created) { [unowned self] homeTab in
+			let homeImage = UIImage(named: "home")
+			
+			let homeItem = UITabBarItem(title: "Home", image: homeImage, selectedImage: nil)
+			
+			homeTab.tabBarItem = homeItem
+			
+			self.rootViewController.setViewControllers([homeTab], animated: true)
+		}
+		
+		return .multiple(flowContributors: [
+			.contribute(withNextPresentable: homeFlow, withNextStepper: homeFlow.stepper)
+		])
 	}
 }
