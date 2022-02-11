@@ -34,6 +34,7 @@
 		F7A5B2A327B62A3100152676 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B2A227B62A3100152676 /* LoginReactor.swift */; };
 		F7A5B2A527B62ADF00152676 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B2A427B62ADF00152676 /* LoginViewController.swift */; };
 		F7A5B2A927B6304D00152676 /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B2A827B6304D00152676 /* LoginFlow.swift */; };
+		F7A5B2AC27B6386E00152676 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B2AB27B6386E00152676 /* MainFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		F7A5B2A227B62A3100152676 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		F7A5B2A427B62ADF00152676 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7A5B2A827B6304D00152676 /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
+		F7A5B2AB27B6386E00152676 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +294,7 @@
 		F7A5B29827B5E16600152676 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				F7A5B2AA27B6386100152676 /* Main */,
 				F7A5B2A727B6304400152676 /* Login */,
 				F7A5B29D27B5E9ED00152676 /* AppFlow.swift */,
 			);
@@ -329,6 +332,14 @@
 				F7A5B2A827B6304D00152676 /* LoginFlow.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F7A5B2AA27B6386100152676 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B2AB27B6386E00152676 /* MainFlow.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,6 +564,7 @@
 				F7A5B2A927B6304D00152676 /* LoginFlow.swift in Sources */,
 				F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
+				F7A5B2AC27B6386E00152676 /* MainFlow.swift in Sources */,
 				F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */,
 				F7A5B2A527B62ADF00152676 /* LoginViewController.swift in Sources */,
 				F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */,
