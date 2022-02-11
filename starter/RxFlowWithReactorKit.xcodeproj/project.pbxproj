@@ -29,6 +29,7 @@
 		F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29227B5E09F00152676 /* BaseService.swift */; };
 		F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29327B5E09F00152676 /* LoginService.swift */; };
 		F7A5B29B27B5E17800152676 /* SampleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29A27B5E17800152676 /* SampleStep.swift */; };
+		F7A5B29E27B5E9ED00152676 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B29D27B5E9ED00152676 /* AppFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		F7A5B29227B5E09F00152676 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		F7A5B29327B5E09F00152676 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		F7A5B29A27B5E17800152676 /* SampleStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStep.swift; sourceTree = "<group>"; };
+		F7A5B29D27B5E9ED00152676 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 		F7A5B25527B5DD5500152676 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F7A5B29927B5E16E00152676 /* Step */,
 				F7A5B29827B5E16600152676 /* Flows */,
 				F7A5B28F27B5E09E00152676 /* Services */,
 				F7A5B28A27B5E07A00152676 /* Network */,
@@ -279,7 +282,7 @@
 		F7A5B29827B5E16600152676 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				F7A5B29927B5E16E00152676 /* Step */,
+				F7A5B29D27B5E9ED00152676 /* AppFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */,
 				F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */,
 				F7A5B28827B5E05800152676 /* Models.swift in Sources */,
+				F7A5B29E27B5E9ED00152676 /* AppFlow.swift in Sources */,
 				F7A5B29B27B5E17800152676 /* SampleStep.swift in Sources */,
 				F7A5B28527B5E05800152676 /* Observable+Extensions.swift in Sources */,
 				F7A5B28727B5E05800152676 /* ActivityIndicator.swift in Sources */,
