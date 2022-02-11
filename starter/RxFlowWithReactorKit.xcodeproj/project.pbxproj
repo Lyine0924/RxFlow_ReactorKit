@@ -15,6 +15,13 @@
 		F7A5B23227B5DC8A00152676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A5B23027B5DC8A00152676 /* LaunchScreen.storyboard */; };
 		F7A5B23D27B5DC8A00152676 /* RxFlowWithReactorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B23C27B5DC8A00152676 /* RxFlowWithReactorKitTests.swift */; };
 		F7A5B24827B5DC8A00152676 /* RxFlowWithReactorKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B24727B5DC8A00152676 /* RxFlowWithReactorKitUITests.swift */; };
+		F7A5B28327B5E05800152676 /* UIView+safeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B27A27B5E05800152676 /* UIView+safeArea.swift */; };
+		F7A5B28427B5E05800152676 /* Cell+ReusableID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B27B27B5E05800152676 /* Cell+ReusableID.swift */; };
+		F7A5B28527B5E05800152676 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B27D27B5E05800152676 /* Observable+Extensions.swift */; };
+		F7A5B28627B5E05800152676 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B27E27B5E05800152676 /* UIViewController+Rx.swift */; };
+		F7A5B28727B5E05800152676 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B27F27B5E05800152676 /* ActivityIndicator.swift */; };
+		F7A5B28827B5E05800152676 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B28127B5E05800152676 /* Models.swift */; };
+		F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B28227B5E05800152676 /* AnimationTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		F7A5B24327B5DC8A00152676 /* RxFlowWithReactorKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxFlowWithReactorKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5B24727B5DC8A00152676 /* RxFlowWithReactorKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFlowWithReactorKitUITests.swift; sourceTree = "<group>"; };
 		F7A5B24927B5DC8A00152676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A5B27A27B5E05800152676 /* UIView+safeArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+safeArea.swift"; sourceTree = "<group>"; };
+		F7A5B27B27B5E05800152676 /* Cell+ReusableID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+ReusableID.swift"; sourceTree = "<group>"; };
+		F7A5B27D27B5E05800152676 /* Observable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extensions.swift"; sourceTree = "<group>"; };
+		F7A5B27E27B5E05800152676 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		F7A5B27F27B5E05800152676 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		F7A5B28127B5E05800152676 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F7A5B28227B5E05800152676 /* AnimationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +168,7 @@
 		F7A5B25527B5DD5500152676 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F7A5B27727B5E05800152676 /* Common */,
 				F7A5B25727B5DD6900152676 /* Core */,
 			);
 			path = Sources;
@@ -176,6 +191,52 @@
 				F7A5B22727B5DC8800152676 /* SceneDelegate.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		F7A5B27727B5E05800152676 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B27827B5E05800152676 /* Extension */,
+				F7A5B27F27B5E05800152676 /* ActivityIndicator.swift */,
+				F7A5B28027B5E05800152676 /* Model */,
+				F7A5B28227B5E05800152676 /* AnimationTransition.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F7A5B27827B5E05800152676 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B27927B5E05800152676 /* UIKit */,
+				F7A5B27C27B5E05800152676 /* Rx */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F7A5B27927B5E05800152676 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B27A27B5E05800152676 /* UIView+safeArea.swift */,
+				F7A5B27B27B5E05800152676 /* Cell+ReusableID.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F7A5B27C27B5E05800152676 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B27D27B5E05800152676 /* Observable+Extensions.swift */,
+				F7A5B27E27B5E05800152676 /* UIViewController+Rx.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		F7A5B28027B5E05800152676 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B28127B5E05800152676 /* Models.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,7 +454,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */,
+				F7A5B28327B5E05800152676 /* UIView+safeArea.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
+				F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */,
+				F7A5B28827B5E05800152676 /* Models.swift in Sources */,
+				F7A5B28527B5E05800152676 /* Observable+Extensions.swift in Sources */,
+				F7A5B28727B5E05800152676 /* ActivityIndicator.swift in Sources */,
+				F7A5B28627B5E05800152676 /* UIViewController+Rx.swift in Sources */,
+				F7A5B28427B5E05800152676 /* Cell+ReusableID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
