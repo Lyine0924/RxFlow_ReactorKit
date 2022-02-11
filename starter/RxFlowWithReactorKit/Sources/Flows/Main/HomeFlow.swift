@@ -47,6 +47,26 @@ final class HomeFlow: Flow {
 	// MARK: Navigate
 	
 	func navigate(to step: Step) -> FlowContributors {
-		return .none
+		guard let step = step.asSampleStep else { return .none }
+		
+		switch step {
+			case .homeIsRequired:
+				return coordinateToHome()
+			default:
+				return .none
+		}
+	}
+}
+
+// MARK: - Extensions
+
+private extension HomeFlow {
+	func coordinateToHome() -> FlowContributors {
+		let reactor = HomeReactor(provider: provider)
+		let viewController = HomeViewController(with: reactor)
+		
+		self.rootViewController.setViewControllers([viewController], animated: true)
+		
+		return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
 	}
 }
