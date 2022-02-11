@@ -16,7 +16,17 @@ final class MainFlow: Flow {
 		return self.rootViewController
 	}
 	
+	struct Dependency {
+		let provider: ServiceProviderType
+	}
+	
 	let rootViewController = UITabBarController()
+	
+	private let dependency: Dependency
+	
+	init(dependency: Dependency) {
+		self.dependency = dependency
+	}
 	
 	func navigate(to step: Step) -> FlowContributors {
 		return .none
