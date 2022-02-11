@@ -50,7 +50,7 @@ extension LoginReactor {
 			case .loginButtonDidTap:
 				self.dependency.provider.loginService.setUserLogin()
 				
-				steps.accept(SampleStep.loginIsRequired)
+				steps.accept(SampleStep.loginIsCompleted)
 				
 				return .empty()
 		}
