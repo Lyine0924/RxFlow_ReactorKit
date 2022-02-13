@@ -40,6 +40,7 @@
 		F7A5B2B427B63C6F00152676 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B2B327B63C6F00152676 /* HomeViewController.swift */; };
 		F7FBD05F27B9C92E002265FD /* MiddleReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FBD05E27B9C92E002265FD /* MiddleReactor.swift */; };
 		F7FBD06127B9C9E0002265FD /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FBD06027B9C9E0002265FD /* MiddleViewController.swift */; };
+		F7FBD06327B9CDE2002265FD /* MiddleFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FBD06227B9CDE2002265FD /* MiddleFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		F7A5B2B327B63C6F00152676 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F7FBD05E27B9C92E002265FD /* MiddleReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleReactor.swift; sourceTree = "<group>"; };
 		F7FBD06027B9C9E0002265FD /* MiddleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
+		F7FBD06227B9CDE2002265FD /* MiddleFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 				F7A5B2AA27B6386100152676 /* Main */,
 				F7A5B2A727B6304400152676 /* Login */,
 				F7A5B29D27B5E9ED00152676 /* AppFlow.swift */,
+				F7FBD06227B9CDE2002265FD /* MiddleFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				F7A5B2A327B62A3100152676 /* LoginReactor.swift in Sources */,
 				F7A5B28727B5E05800152676 /* ActivityIndicator.swift in Sources */,
 				F7A5B28627B5E05800152676 /* UIViewController+Rx.swift in Sources */,
+				F7FBD06327B9CDE2002265FD /* MiddleFlow.swift in Sources */,
 				F7A5B29527B5E09F00152676 /* ServiceProvider.swift in Sources */,
 				F7FBD06127B9C9E0002265FD /* MiddleViewController.swift in Sources */,
 				F7A5B29427B5E09F00152676 /* NetworkService.swift in Sources */,
