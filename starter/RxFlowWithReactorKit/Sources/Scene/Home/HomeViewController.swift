@@ -59,6 +59,39 @@ private extension HomeViewController {
 
 extension HomeViewController {
 	func bind(reactor: Reactor) {
+		bindView(reactor)
+		bindAction(reactor)
+		bindState(reactor)
+	}
+	
+	private func bindView(_ reactor: Reactor) {
+		tableView.rx.modelSelected(Movie.self)
+			.map { $0.description }
+			.map { Reactor.Action.itemSelected(title: $0) }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
+	}
+	
+	private func bindAction(_ reactor: Reactor) {
+		self.rx.viewWillAppear
+			.map { _ in Reactor.Action.loadData }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
+	}
+	
+	private func bindState(_ reactor: Reactor) {
+		let sharedState = reactor.state.share(replay: 1).subscribe(on: MainScheduler.instance)
 		
+		sharedState
+			.compactMap { $0.movies }
+			.bind(to:
+							tableView.rx.items(
+								cellIdentifier: HomeCell.reusableID,
+								cellType: HomeCell.self
+							)
+			) { index, item, cell in
+				cell.bind(with: item)
+			}
+			.disposed(by: disposeBag)
 	}
 }

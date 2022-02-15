@@ -20,7 +20,8 @@ final class HomeReactor: Reactor, Stepper {
 	// MARK: Events
 	
 	enum Action {
-
+		case loadData
+		case itemSelected(title: String)
 	}
 	
 	enum Mutation {
@@ -53,7 +54,15 @@ final class HomeReactor: Reactor, Stepper {
 
 extension HomeReactor {
 	func mutate(action: Action) -> Observable<Mutation> {
-		return .empty()
+		switch action {
+			case .loadData:
+				return fetchMovieResult()
+				
+			case .itemSelected(let title):
+				steps.accept(SampleStep.homeItemIsPicked(withID: title))
+				
+				return .empty()
+		}
 	}
 }
 
