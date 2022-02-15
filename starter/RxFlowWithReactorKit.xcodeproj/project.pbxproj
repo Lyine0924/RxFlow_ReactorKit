@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		85F56A9F3FFF44A8C4F59734 /* Pods_RxFlowWithReactorKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D7D225FBD51624319DD836 /* Pods_RxFlowWithReactorKitTests.framework */; };
 		B48C2F2237830AAD22EB23F5 /* Pods_RxFlowWithReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */; };
+		F741049027BB33B5002694E7 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741048F27BB33B5002694E7 /* HomeCell.swift */; };
 		F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22527B5DC8800152676 /* AppDelegate.swift */; };
 		F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22727B5DC8800152676 /* SceneDelegate.swift */; };
 		F7A5B22F27B5DC8A00152676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A5B22E27B5DC8A00152676 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		B33A26B364C5D4E59EF3AAE5 /* Pods-RxFlowWithReactorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKit.debug.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKit/Pods-RxFlowWithReactorKit.debug.xcconfig"; sourceTree = "<group>"; };
 		DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxFlowWithReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25C318A4F3C29B4BC5B6174 /* Pods-RxFlowWithReactorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKitTests.release.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKitTests/Pods-RxFlowWithReactorKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		F741048F27BB33B5002694E7 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F7A5B22227B5DC8800152676 /* RxFlowWithReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxFlowWithReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5B22527B5DC8800152676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A5B22727B5DC8800152676 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 			children = (
 				F7A5B2B127B63C3D00152676 /* HomeReactor.swift */,
 				F7A5B2B327B63C6F00152676 /* HomeViewController.swift */,
+				F741048F27BB33B5002694E7 /* HomeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */,
 				F7A5B2A527B62ADF00152676 /* LoginViewController.swift in Sources */,
 				F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */,
+				F741049027BB33B5002694E7 /* HomeCell.swift in Sources */,
 				F7A5B28827B5E05800152676 /* Models.swift in Sources */,
 				F7A5B29E27B5E9ED00152676 /* AppFlow.swift in Sources */,
 				F7A5B29B27B5E17800152676 /* SampleStep.swift in Sources */,
