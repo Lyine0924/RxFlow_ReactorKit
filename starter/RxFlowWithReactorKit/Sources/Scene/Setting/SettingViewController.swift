@@ -40,7 +40,7 @@ final class SettingViewController: UIViewController {
 private extension SettingViewController {
 	func setUI() {
 		self.title = "Middle"
-		view.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+		view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
 	}
 }
 
