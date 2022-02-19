@@ -11,7 +11,10 @@ import RxFlow
 
 final class SettingReactor: Reactor, Stepper {
 	
-	enum Action {}
+	enum Action {
+		case logoutButtonDidTap
+		case alertButtonDidTap
+	}
 	
 	enum Mutation {}
 	
@@ -32,3 +35,27 @@ final class SettingReactor: Reactor, Stepper {
 	}
 }
 
+// MARK: Mutation
+
+extension SettingReactor {
+	func mutate(action: Action) -> Observable<Mutation> {
+		switch action {
+			case .logoutButtonDidTap:
+				return logoutButtonDidTapMutation()
+			case .alertButtonDidTap:
+				return alertButtonDidTapMutation()
+		}
+	}
+}
+
+// MARK: Mutation Impl
+
+extension SettingReactor {
+	private func logoutButtonDidTapMutation() -> Observable<Mutation> {
+		return .empty()
+	}
+	
+	private func alertButtonDidTapMutation() -> Observable<Mutation> {
+		return .empty()
+	}
+}
