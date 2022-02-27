@@ -38,3 +38,15 @@ final class HomeDetailReactor: Reactor, Stepper {
 		self.provider = provider
 	}
 }
+
+// MARK: Mutation
+
+extension HomeDetailReactor {
+	func mutate(action: Action) -> Observable<Mutation> {
+		switch action {
+			case .toMiddleDidTap:
+				steps.accept(SampleStep.middleIsRequiredAgain)
+				return .empty()
+		}
+	}
+}
