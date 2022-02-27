@@ -91,9 +91,12 @@ private extension MiddleFlow {
 		}
 	}
 	
-	// TODO: MiddleDetail 화면이 추가되면 구현할 예정이에요.
 	func presentMiddleDetail() -> FlowContributors {
-		return .none
+		let reactor = MiddleDetailReactor(provider: provider)
+		let vc = MiddleDetailViewContorller(with: reactor)
+		self.rootViewController.visibleViewController?.present(vc, animated: true)
+		return .one(flowContributor: .contribute(withNextPresentable: vc,
+																						 withNextStepper: reactor))
 	}
 	
 	func dismissVC() -> FlowContributors {
