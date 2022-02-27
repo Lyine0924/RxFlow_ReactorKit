@@ -12,6 +12,12 @@ import RxFlow
 
 final class MainFlow: Flow {
 	
+	enum TabIndex: Int {
+		case home = 0
+		case middle = 1
+		case setting = 2
+	}
+	
 	var root: Presentable {
 		return self.rootViewController
 	}
