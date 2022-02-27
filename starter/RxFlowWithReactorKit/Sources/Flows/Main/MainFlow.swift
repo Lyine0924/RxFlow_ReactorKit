@@ -12,6 +12,12 @@ import RxFlow
 
 final class MainFlow: Flow {
 	
+	enum TabIndex: Int {
+		case home = 0
+		case middle = 1
+		case setting = 2
+	}
+	
 	var root: Presentable {
 		return self.rootViewController
 	}
@@ -39,6 +45,8 @@ final class MainFlow: Flow {
 				return .end(forwardToParentFlowWithStep: SampleStep.loginIsRequired)
 			case .mainTabBarIsRequired:
 				return coordinateToMainTabBar()
+			case .settingAndAlertIsRequired(let message):
+				return coordinateToSetting(with: message)
 			default:
 				return .none
 		}
@@ -74,6 +82,14 @@ extension MainFlow {
 			.contribute(withNextPresentable: homeFlow, withNextStepper: homeFlow.stepper),
 			.contribute(withNextPresentable: middleFlow, withNextStepper: middleFlow.stepper),
 			.contribute(withNextPresentable: settingFlow, withNextStepper: settingFlow.stepper)
+		])
+	}
+	
+	private func coordinateToSetting(with msg: String) -> FlowContributors {
+		self.rootViewController.selectedIndex = TabIndex.setting.rawValue
+		return .multiple(flowContributors: [
+			.contribute(withNextPresentable: settingFlow, withNextStepper: OneStepper(withSingleStep: SampleStep.settingIsRequired)),
+			.contribute(withNextPresentable: settingFlow, withNextStepper: OneStepper(withSingleStep: SampleStep.alert(message: msg)))
 		])
 	}
 }
