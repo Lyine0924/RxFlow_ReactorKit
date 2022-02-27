@@ -45,6 +45,8 @@ final class MainFlow: Flow {
 				return .end(forwardToParentFlowWithStep: SampleStep.loginIsRequired)
 			case .mainTabBarIsRequired:
 				return coordinateToMainTabBar()
+			case .middleIsRequiredAgain:
+				return coordinateToMiddle(step: step)
 			case .settingAndAlertIsRequired(let message):
 				return coordinateToSetting(with: message)
 			default:
@@ -83,6 +85,16 @@ extension MainFlow {
 			.contribute(withNextPresentable: middleFlow, withNextStepper: middleFlow.stepper),
 			.contribute(withNextPresentable: settingFlow, withNextStepper: settingFlow.stepper)
 		])
+	}
+	
+	private func coordinateToMiddle(step: Step) -> FlowContributors {
+		self.rootViewController.selectedIndex = TabIndex.middle.rawValue
+		return .one(flowContributor:
+										.contribute(
+											withNextPresentable: middleFlow,
+											withNextStepper: OneStepper(withSingleStep: SampleStep.middleIsRequiredAgain)
+										)
+		)
 	}
 	
 	private func coordinateToSetting(with msg: String) -> FlowContributors {

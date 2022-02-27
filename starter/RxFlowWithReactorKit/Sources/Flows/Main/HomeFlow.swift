@@ -52,6 +52,10 @@ final class HomeFlow: Flow {
 		switch step {
 			case .homeIsRequired:
 				return coordinateToHome()
+			case .middleIsRequiredAgain:
+				return .one(flowContributor: .forwardToParentFlow(withStep: SampleStep.middleIsRequiredAgain))
+			case .homeItemIsPicked(let movieID):
+				return coordinateToHomeDetail(with: movieID)
 			default:
 				return .none
 		}
@@ -68,5 +72,13 @@ private extension HomeFlow {
 		self.rootViewController.setViewControllers([viewController], animated: true)
 		
 		return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+	}
+	
+	func coordinateToHomeDetail(with ID: String) -> FlowContributors {
+		let reactor = HomeDetailReactor(provider: provider)
+		let vc = HomeDetatilViewController(with: reactor, title: ID)
+		self.rootViewController.pushViewController(vc, animated: true)
+		return .one(flowContributor: .contribute(withNextPresentable: vc,
+																						 withNextStepper: reactor))
 	}
 }

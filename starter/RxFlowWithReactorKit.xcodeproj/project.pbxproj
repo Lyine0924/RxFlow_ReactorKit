@@ -11,6 +11,8 @@
 		B48C2F2237830AAD22EB23F5 /* Pods_RxFlowWithReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */; };
 		EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */; };
 		EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */; };
+		EE4A181D27CB5B4D005752A7 /* HomeDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */; };
+		EE4A181F27CB5B6C005752A7 /* HomeDetatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181E27CB5B6C005752A7 /* HomeDetatilViewController.swift */; };
 		F741049027BB33B5002694E7 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741048F27BB33B5002694E7 /* HomeCell.swift */; };
 		F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22527B5DC8800152676 /* AppDelegate.swift */; };
 		F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22727B5DC8800152676 /* SceneDelegate.swift */; };
@@ -74,6 +76,8 @@
 		DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxFlowWithReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailReactor.swift; sourceTree = "<group>"; };
 		EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailViewController.swift; sourceTree = "<group>"; };
+		EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailReactor.swift; sourceTree = "<group>"; };
+		EE4A181E27CB5B6C005752A7 /* HomeDetatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetatilViewController.swift; sourceTree = "<group>"; };
 		F25C318A4F3C29B4BC5B6174 /* Pods-RxFlowWithReactorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKitTests.release.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKitTests/Pods-RxFlowWithReactorKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		F741048F27BB33B5002694E7 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F7A5B22227B5DC8800152676 /* RxFlowWithReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxFlowWithReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,7 +325,6 @@
 				F7A5B2AA27B6386100152676 /* Main */,
 				F7A5B2A727B6304400152676 /* Login */,
 				F7A5B29D27B5E9ED00152676 /* AppFlow.swift */,
-				F7FBD06227B9CDE2002265FD /* MiddleFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				F7A5B2AB27B6386E00152676 /* MainFlow.swift */,
 				F7A5B2AE27B63BB900152676 /* HomeFlow.swift */,
 				F7FBD06927B9F596002265FD /* SettingFlow.swift */,
+				F7FBD06227B9CDE2002265FD /* MiddleFlow.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -378,6 +382,8 @@
 				F7A5B2B127B63C3D00152676 /* HomeReactor.swift */,
 				F7A5B2B327B63C6F00152676 /* HomeViewController.swift */,
 				F741048F27BB33B5002694E7 /* HomeCell.swift */,
+				EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */,
+				EE4A181E27CB5B6C005752A7 /* HomeDetatilViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -637,6 +643,7 @@
 				F7A5B29727B5E09F00152676 /* LoginService.swift in Sources */,
 				F741049027BB33B5002694E7 /* HomeCell.swift in Sources */,
 				F7A5B28827B5E05800152676 /* Models.swift in Sources */,
+				EE4A181F27CB5B6C005752A7 /* HomeDetatilViewController.swift in Sources */,
 				F7A5B29E27B5E9ED00152676 /* AppFlow.swift in Sources */,
 				F7A5B29B27B5E17800152676 /* SampleStep.swift in Sources */,
 				F7A5B28527B5E05800152676 /* Observable+Extensions.swift in Sources */,
@@ -650,6 +657,7 @@
 				F7A5B29427B5E09F00152676 /* NetworkService.swift in Sources */,
 				F7A5B28427B5E05800152676 /* Cell+ReusableID.swift in Sources */,
 				F7FBD05F27B9C92E002265FD /* MiddleReactor.swift in Sources */,
+				EE4A181D27CB5B4D005752A7 /* HomeDetailReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
