@@ -52,6 +52,8 @@ final class SettingFlow: Flow {
 				return coordinateToSetting()
 			case .loginIsRequired:
 				return .end(forwardToParentFlowWithStep: SampleStep.loginIsRequired)
+			case .alert(let message):
+				return navigateToAlertScreen(message: message)
 			default:
 				return .none
 		}
@@ -67,5 +69,12 @@ private extension SettingFlow {
 		self.rootViewController.setViewControllers([vc], animated: true)
 		return .one(flowContributor: .contribute(withNextPresentable: vc,
 																						 withNextStepper: reactor))
+	}
+	
+	func navigateToAlertScreen(message: String) -> FlowContributors {
+		let alert = UIAlertController(title: "Demo", message: message, preferredStyle: .alert)
+		alert.addAction(.init(title: "Cancel", style: .cancel))
+		rootViewController.present(alert, animated: true)
+		return .none
 	}
 }

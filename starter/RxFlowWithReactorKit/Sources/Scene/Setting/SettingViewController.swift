@@ -8,11 +8,24 @@
 import UIKit
 import ReactorKit
 import RxCocoa
+import Then
 
 final class SettingViewController: UIViewController {
 	var disposeBag: DisposeBag = .init()
 	
 	typealias Reactor = SettingReactor
+	
+	// MARK: UI Properties
+	
+	private let logoutButton: UIButton = UIButton().then {
+		$0.setTitle("logout", for: .normal)
+		$0.backgroundColor = .black
+	}
+	
+	private let alertButton: UIButton = UIButton().then {
+		$0.setTitle("showAlert", for: UIControl.State())
+		$0.backgroundColor = .black
+	}
 	
 	init(with reactor: Reactor) {
 		super.init(nibName: nil, bundle: nil)
@@ -39,8 +52,24 @@ final class SettingViewController: UIViewController {
 
 private extension SettingViewController {
 	func setUI() {
-		self.title = "Middle"
+		self.title = "Setting"
 		view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+		
+		[logoutButton, alertButton].forEach {
+			self.view.addSubview($0)
+		}
+		
+		logoutButton.snp.makeConstraints {
+			$0.leading.trailing.equalToSuperview().inset(50)
+			$0.bottom.equalTo(view.safeArea.bottom).inset(50)
+			$0.height.equalTo(50)
+		}
+		
+		alertButton.snp.makeConstraints {
+			$0.leading.trailing.equalToSuperview().inset(50)
+			$0.bottom.equalTo(logoutButton.snp.top).offset(-50)
+			$0.height.equalTo(50)
+		}
 	}
 }
 
@@ -52,7 +81,15 @@ extension SettingViewController: View {
 	}
 	
 	private func bindView(_ reactor: Reactor) {
+		logoutButton.rx.tap
+			.map { Reactor.Action.logoutButtonDidTap }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
 		
+		alertButton.rx.tap
+			.map { Reactor.Action.alertButtonDidTap }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
 	}
 	
 	private func bindAction(_ reactor: Reactor) {
