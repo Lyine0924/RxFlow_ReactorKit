@@ -90,7 +90,15 @@ extension MiddleViewController: View {
 	}
 	
 	private func bindView(_ reactor: Reactor) {
+		detailButton.rx.tap
+			.map { Reactor.Action.detailButtonDidTap }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
 		
+		twoDepthFlow.rx.tap
+			.map { Reactor.Action.twoFlowButtonDidTap }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
 	}
 	
 	private func bindAction(_ reactor: Reactor) {
