@@ -52,6 +52,8 @@ final class HomeFlow: Flow {
 		switch step {
 			case .homeIsRequired:
 				return coordinateToHome()
+			case .middleIsRequiredAgain:
+				return .one(flowContributor: .forwardToParentFlow(withStep: SampleStep.middleIsRequiredAgain))
 			case .homeItemIsPicked(let movieID):
 				return coordinateToHomeDetail(with: movieID)
 			default:
