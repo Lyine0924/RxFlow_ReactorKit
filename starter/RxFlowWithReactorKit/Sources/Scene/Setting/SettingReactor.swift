@@ -52,10 +52,18 @@ extension SettingReactor {
 
 extension SettingReactor {
 	private func logoutButtonDidTapMutation() -> Observable<Mutation> {
+		
+		self.provider.loginService.setUserLogout()
+		
+		steps.accept(SampleStep.loginIsRequired)
+		
 		return .empty()
 	}
 	
 	private func alertButtonDidTapMutation() -> Observable<Mutation> {
+		
+		steps.accept(SampleStep.alert(message: "From Setting"))
+		
 		return .empty()
 	}
 }

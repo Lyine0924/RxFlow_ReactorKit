@@ -81,7 +81,15 @@ extension SettingViewController: View {
 	}
 	
 	private func bindView(_ reactor: Reactor) {
+		logoutButton.rx.tap
+			.map { Reactor.Action.logoutButtonDidTap }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
 		
+		alertButton.rx.tap
+			.map { Reactor.Action.alertButtonDidTap }
+			.bind(to: reactor.action)
+			.disposed(by: disposeBag)
 	}
 	
 	private func bindAction(_ reactor: Reactor) {
