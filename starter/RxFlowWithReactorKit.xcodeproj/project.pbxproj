@@ -325,7 +325,6 @@
 				F7A5B2AA27B6386100152676 /* Main */,
 				F7A5B2A727B6304400152676 /* Login */,
 				F7A5B29D27B5E9ED00152676 /* AppFlow.swift */,
-				F7FBD06227B9CDE2002265FD /* MiddleFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -372,6 +371,7 @@
 				F7A5B2AB27B6386E00152676 /* MainFlow.swift */,
 				F7A5B2AE27B63BB900152676 /* HomeFlow.swift */,
 				F7FBD06927B9F596002265FD /* SettingFlow.swift */,
+				F7FBD06227B9CDE2002265FD /* MiddleFlow.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
