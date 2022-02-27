@@ -42,3 +42,15 @@ final class MiddleDetailReactor: Reactor, Stepper {
 		self.provider = provider
 	}
 }
+
+// MARK: Mutation
+
+extension MiddleDetailReactor {
+	func mutate(action: Action) -> Observable<Mutation> {
+		switch action {
+			case .dismissButtonDidTap:
+				steps.accept(SampleStep.dismiss)
+				return .empty()
+		}
+	}
+}
