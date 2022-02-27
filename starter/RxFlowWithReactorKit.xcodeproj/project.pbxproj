@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		85F56A9F3FFF44A8C4F59734 /* Pods_RxFlowWithReactorKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D7D225FBD51624319DD836 /* Pods_RxFlowWithReactorKitTests.framework */; };
 		B48C2F2237830AAD22EB23F5 /* Pods_RxFlowWithReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */; };
+		EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */; };
+		EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */; };
 		F741049027BB33B5002694E7 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741048F27BB33B5002694E7 /* HomeCell.swift */; };
 		F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22527B5DC8800152676 /* AppDelegate.swift */; };
 		F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22727B5DC8800152676 /* SceneDelegate.swift */; };
@@ -70,6 +72,8 @@
 		96D7D225FBD51624319DD836 /* Pods_RxFlowWithReactorKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxFlowWithReactorKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33A26B364C5D4E59EF3AAE5 /* Pods-RxFlowWithReactorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKit.debug.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKit/Pods-RxFlowWithReactorKit.debug.xcconfig"; sourceTree = "<group>"; };
 		DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxFlowWithReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailReactor.swift; sourceTree = "<group>"; };
+		EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailViewController.swift; sourceTree = "<group>"; };
 		F25C318A4F3C29B4BC5B6174 /* Pods-RxFlowWithReactorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKitTests.release.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKitTests/Pods-RxFlowWithReactorKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		F741048F27BB33B5002694E7 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F7A5B22227B5DC8800152676 /* RxFlowWithReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxFlowWithReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +387,8 @@
 			children = (
 				F7FBD05E27B9C92E002265FD /* MiddleReactor.swift */,
 				F7FBD06027B9C9E0002265FD /* MiddleViewController.swift */,
+				EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */,
+				EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */,
 			);
 			path = Middle;
 			sourceTree = "<group>";
@@ -624,6 +630,7 @@
 				F7FBD06A27B9F596002265FD /* SettingFlow.swift in Sources */,
 				F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
+				EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */,
 				F7A5B2AC27B6386E00152676 /* MainFlow.swift in Sources */,
 				F7A5B28927B5E05800152676 /* AnimationTransition.swift in Sources */,
 				F7A5B2A527B62ADF00152676 /* LoginViewController.swift in Sources */,
@@ -638,6 +645,7 @@
 				F7A5B28627B5E05800152676 /* UIViewController+Rx.swift in Sources */,
 				F7FBD06327B9CDE2002265FD /* MiddleFlow.swift in Sources */,
 				F7A5B29527B5E09F00152676 /* ServiceProvider.swift in Sources */,
+				EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */,
 				F7FBD06127B9C9E0002265FD /* MiddleViewController.swift in Sources */,
 				F7A5B29427B5E09F00152676 /* NetworkService.swift in Sources */,
 				F7A5B28427B5E05800152676 /* Cell+ReusableID.swift in Sources */,
