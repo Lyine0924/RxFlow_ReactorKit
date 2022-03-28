@@ -122,7 +122,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-*.NeedleGenerated.swift
+*/NeedleGenerated.swift
 
 ### Xcode ###
 # Xcode
