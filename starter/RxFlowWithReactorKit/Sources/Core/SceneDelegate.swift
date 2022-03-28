@@ -22,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 		guard let windowScene = (scene as? UIWindowScene) else { return }
+    
+    registerProviderFactories()
 		
 		coordinatorLogStart()
 		
@@ -66,15 +68,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
 	private func coordinateToAppFlow(with windowScene: UIWindowScene) {
 		let window = UIWindow(windowScene: windowScene)
-		self.window = window
 		
-		let provider: ServiceProviderType = ServiceProvider()
-		let appFlow = AppFlow(with: window, and: provider)
-		let appStepper = AppStepper(provider: provider)
+		let rootComponent = RootComponent(window: window)
 		
-		coordinator.coordinate(flow: appFlow, with: appStepper)
+    coordinator.coordinate(flow: rootComponent.appFlowBuilder.flow, with: rootComponent.appFlowBuilder.stepper)
 		
 		window.makeKeyAndVisible()
+    
+    self.window = window
 	}
 	
 	private func coordinatorLogStart() {
