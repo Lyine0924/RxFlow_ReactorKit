@@ -4,6 +4,7 @@
 //
 //  Created by 한상진 on 2021/04/08.
 //
+import Foundation
 
 protocol ServiceProviderType: class {
     var networkService: NetworkManagerType { get }
@@ -13,5 +14,5 @@ protocol ServiceProviderType: class {
 
 final class ServiceProvider: ServiceProviderType {
     lazy var networkService: NetworkManagerType = NetworkManager()
-    lazy var loginService: LoginServiceType = LoginService(provider: self)
+    lazy var loginService: LoginServiceType = LoginService(defaults:  UserDefaults.standard)
 }
