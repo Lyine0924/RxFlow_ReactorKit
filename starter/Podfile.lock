@@ -1,4 +1,5 @@
 PODS:
+  - NeedleFoundation (0.17.2)
   - Nimble (9.0.0)
   - ReactorKit (3.0.0):
     - RxSwift (~> 6.0)
@@ -30,6 +31,7 @@ PODS:
   - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
+  - NeedleFoundation
   - ReactorKit
   - RxCocoa
   - RxFlow
@@ -41,6 +43,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - NeedleFoundation
     - Nimble
     - ReactorKit
     - RxBlocking
@@ -55,6 +58,7 @@ SPEC REPOS:
     - WeakMapTable
 
 SPEC CHECKSUMS:
+  NeedleFoundation: 36cfaea9ae9eb527a796f5c1df19296c722666b8
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   ReactorKit: 5348c9881dcb546605b451e32759dccc9937d36e
   RxBlocking: 602095fba0bce7b16b56ccec89edf780c248b7d9
@@ -68,6 +72,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 90347a495707504a4ee359d2bb5d9d4a2faa72f6
+PODFILE CHECKSUM: 782565247b58d216e944a05013966eeef6f222a4
 
 COCOAPODS: 1.11.2
