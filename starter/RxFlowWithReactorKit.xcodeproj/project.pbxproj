@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		85F56A9F3FFF44A8C4F59734 /* Pods_RxFlowWithReactorKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D7D225FBD51624319DD836 /* Pods_RxFlowWithReactorKitTests.framework */; };
 		B48C2F2237830AAD22EB23F5 /* Pods_RxFlowWithReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */; };
+		EE1A164027F1BF6C00E87D4C /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A163F27F1BF6C00E87D4C /* RootComponent.swift */; };
+		EE1A164527F1C46500E87D4C /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164427F1C46500E87D4C /* NeedleGenerated.swift */; };
+		EE1A164727F1D84500E87D4C /* ServiceProviderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */; };
+		EE1A164927F1D86600E87D4C /* AppFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */; };
 		EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */; };
 		EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */; };
 		EE4A181D27CB5B4D005752A7 /* HomeDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */; };
@@ -74,6 +78,10 @@
 		96D7D225FBD51624319DD836 /* Pods_RxFlowWithReactorKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxFlowWithReactorKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33A26B364C5D4E59EF3AAE5 /* Pods-RxFlowWithReactorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKit.debug.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKit/Pods-RxFlowWithReactorKit.debug.xcconfig"; sourceTree = "<group>"; };
 		DC15F6BB0924FB9A2CDE3E2A /* Pods_RxFlowWithReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxFlowWithReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1A163F27F1BF6C00E87D4C /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		EE1A164427F1C46500E87D4C /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderComponent.swift; sourceTree = "<group>"; };
+		EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowComponent.swift; sourceTree = "<group>"; };
 		EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailReactor.swift; sourceTree = "<group>"; };
 		EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailViewController.swift; sourceTree = "<group>"; };
 		EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailReactor.swift; sourceTree = "<group>"; };
@@ -170,6 +178,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE1A163D27F1BF2300E87D4C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5B29D27B5E9ED00152676 /* AppFlow.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EE1A163E27F1BF6400E87D4C /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A164427F1C46500E87D4C /* NeedleGenerated.swift */,
+				EE1A163F27F1BF6C00E87D4C /* RootComponent.swift */,
+				EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */,
+				EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		F7A5B21927B5DC8800152676 = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +249,7 @@
 		F7A5B25527B5DD5500152676 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EE1A163E27F1BF6400E87D4C /* DI */,
 				F7A5B2A127B62A0D00152676 /* Scene */,
 				F7A5B29927B5E16E00152676 /* Step */,
 				F7A5B29827B5E16600152676 /* Flows */,
@@ -322,9 +350,9 @@
 		F7A5B29827B5E16600152676 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				EE1A163D27F1BF2300E87D4C /* App */,
 				F7A5B2AA27B6386100152676 /* Main */,
 				F7A5B2A727B6304400152676 /* Login */,
-				F7A5B29D27B5E9ED00152676 /* AppFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -416,6 +444,7 @@
 			buildConfigurationList = F7A5B24C27B5DC8A00152676 /* Build configuration list for PBXNativeTarget "RxFlowWithReactorKit" */;
 			buildPhases = (
 				70506E5531A3C90F61616752 /* [CP] Check Pods Manifest.lock */,
+				EE1A164127F1C33A00E87D4C /* ShellScript */,
 				F7A5B21E27B5DC8800152676 /* Sources */,
 				F7A5B21F27B5DC8800152676 /* Frameworks */,
 				F7A5B22027B5DC8800152676 /* Resources */,
@@ -615,6 +644,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxFlowWithReactorKit/Pods-RxFlowWithReactorKit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EE1A164127F1C33A00E87D4C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport SOURCEKIT_LOGGING=0 && $PROJECT_DIR/needle generate $PROJECT_DIR/RxFlowWithReactorKit/Sources/DI/NeedleGenerated.swift RxFlowWithReactorKit/ --header-doc copyright_header.txt\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -627,14 +673,18 @@
 				F7A5B2AF27B63BB900152676 /* HomeFlow.swift in Sources */,
 				F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */,
 				F7A5B28327B5E05800152676 /* UIView+safeArea.swift in Sources */,
+				EE1A164927F1D86600E87D4C /* AppFlowComponent.swift in Sources */,
 				F7FBD06827B9F36E002265FD /* SettingViewController.swift in Sources */,
+				EE1A164727F1D84500E87D4C /* ServiceProviderComponent.swift in Sources */,
 				F7A5B28D27B5E07A00152676 /* NetworkManager.swift in Sources */,
 				F7A5B2A027B5EC2000152676 /* Step+asSample.swift in Sources */,
 				F7A5B2B227B63C3D00152676 /* HomeReactor.swift in Sources */,
 				F7A5B28E27B5E07A00152676 /* TestNetworkManager.swift in Sources */,
+				EE1A164027F1BF6C00E87D4C /* RootComponent.swift in Sources */,
 				F7A5B2A927B6304D00152676 /* LoginFlow.swift in Sources */,
 				F7FBD06A27B9F596002265FD /* SettingFlow.swift in Sources */,
 				F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */,
+				EE1A164527F1C46500E87D4C /* NeedleGenerated.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
 				EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */,
 				F7A5B2AC27B6386E00152676 /* MainFlow.swift in Sources */,

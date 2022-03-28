@@ -20,8 +20,12 @@ protocol LoginServiceType: class {
     var didLogin: Bool { get }
 }
 
-final class LoginService: BaseService, LoginServiceType {
-    let defaults = UserDefaults.standard
+final class LoginService: LoginServiceType {
+    var defaults: UserDefaults
+  
+    init(defaults: UserDefaults) {
+      self.defaults = defaults
+    }
     
     var didLogin: Bool {
         return defaults.bool(forKey: UserLogin.didLogin)

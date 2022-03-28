@@ -22,6 +22,8 @@ target 'RxFlowWithReactorKit' do
   pod 'RxFlow'
   pod 'ReactorKit'
 
+  pod 'NeedleFoundation'
+
   target 'RxFlowWithReactorKitTests' do
     inherit! :search_paths
     # Pods for testing
