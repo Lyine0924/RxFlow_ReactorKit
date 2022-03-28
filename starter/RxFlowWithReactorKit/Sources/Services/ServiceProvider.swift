@@ -6,13 +6,21 @@
 //
 import Foundation
 
-protocol ServiceProviderType: class {
+protocol ServiceProviderType: AnyObject {
     var networkService: NetworkManagerType { get }
     var loginService: LoginServiceType { get }
     
 }
 
-final class ServiceProvider: ServiceProviderType {
-    lazy var networkService: NetworkManagerType = NetworkManager()
-    lazy var loginService: LoginServiceType = LoginService(defaults:  UserDefaults.standard)
+final class ServiceProviderImpl: ServiceProviderType {
+  let networkService: NetworkManagerType
+  let loginService: LoginServiceType
+  
+  init(
+    networkService: NetworkManagerType,
+    loginService: LoginServiceType
+  ) {
+    self.networkService = networkService
+    self.loginService = loginService
+  }
 }
