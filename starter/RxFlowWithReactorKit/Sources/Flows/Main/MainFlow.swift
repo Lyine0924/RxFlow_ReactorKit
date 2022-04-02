@@ -29,7 +29,7 @@ final class MainFlow: Flow {
 	
 	init(dependency: MainFlowComponent) {
 		self.homeFlow = dependency.homeFlowBuilder.flow
-		self.middleFlow = .init(with: dependency.serviceBuilder.provider, stepper: .init())
+		self.middleFlow = dependency.middleFlowBuilder.flow
 		self.settingFlow = .init(with: dependency.serviceBuilder.provider, stepper: .init())
 	}
 	

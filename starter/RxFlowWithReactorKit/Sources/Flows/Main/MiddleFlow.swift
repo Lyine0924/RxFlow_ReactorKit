@@ -28,14 +28,14 @@ final class MiddleFlow: Flow {
 	
 	let stepper: MiddleStepper
 	
-	private let provider: ServiceProviderType
+	private let dependency: MiddleFlowComponent
 	
 	// MARK: Init
 	init(
-		with services: ServiceProviderType,
+		with dependency: MiddleFlowComponent,
 		stepper: MiddleStepper
 	) {
-		self.provider = services
+		self.dependency = dependency
 		self.stepper = stepper
 	}
 	
@@ -76,7 +76,7 @@ final class MiddleFlow: Flow {
 
 private extension MiddleFlow {
 	func coordinateToMiddle() -> FlowContributors {
-		let reactor = MiddleReactor(provider: provider)
+		let reactor = MiddleReactor(provider: self.dependency.serviceBuilder.provider)
 		let vc = MiddleViewController(with: reactor)
 		self.rootViewController.setViewControllers([vc], animated: true)
 		return .one(flowContributor: .contribute(withNextPresentable: vc,
@@ -92,7 +92,7 @@ private extension MiddleFlow {
 	}
 	
 	func presentMiddleDetail() -> FlowContributors {
-		let reactor = MiddleDetailReactor(provider: provider)
+		let reactor = MiddleDetailReactor(provider: self.dependency.serviceBuilder.provider)
 		let vc = MiddleDetailViewContorller(with: reactor)
 		self.rootViewController.visibleViewController?.present(vc, animated: true)
 		return .one(flowContributor: .contribute(withNextPresentable: vc,

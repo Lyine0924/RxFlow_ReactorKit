@@ -16,6 +16,7 @@ protocol MainFlowDependency: Dependency {
 protocol MainFlowComponentBuilder {
 	var flow: Flow { get }
 	var homeFlowBuilder: HomeFlowComponenetBuilder { get }
+	var middleFlowBuilder: MiddleFlowComponentBuilder { get }
 }
 
 class MainFlowComponent: Component<MainFlowDependency>, MainFlowComponentBuilder {
@@ -25,5 +26,9 @@ class MainFlowComponent: Component<MainFlowDependency>, MainFlowComponentBuilder
 	
 	var homeFlowBuilder: HomeFlowComponenetBuilder {
 		return HomeFlowComponenet(parent: self)
+	}
+	
+	var middleFlowBuilder: MiddleFlowComponentBuilder {
+		return MiddleFlowComponent(parent: self)
 	}
 }

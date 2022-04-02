@@ -13,6 +13,7 @@
 		EE1A164527F1C46500E87D4C /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164427F1C46500E87D4C /* NeedleGenerated.swift */; };
 		EE1A164727F1D84500E87D4C /* ServiceProviderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */; };
 		EE1A164927F1D86600E87D4C /* AppFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */; };
+		EE28F6F627F825C700E0A906 /* MiddleFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */; };
 		EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */; };
 		EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */; };
 		EE4A181D27CB5B4D005752A7 /* HomeDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */; };
@@ -85,6 +86,7 @@
 		EE1A164427F1C46500E87D4C /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderComponent.swift; sourceTree = "<group>"; };
 		EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowComponent.swift; sourceTree = "<group>"; };
+		EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleFlowComponent.swift; sourceTree = "<group>"; };
 		EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailReactor.swift; sourceTree = "<group>"; };
 		EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailViewController.swift; sourceTree = "<group>"; };
 		EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailReactor.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				EE6578C527F5EDCF0048F92D /* LoginFlowComponent.swift */,
 				EE6578C727F5F0460048F92D /* MainFlowComponent.swift */,
 				EE6578C927F5F5AA0048F92D /* HomeFlowComponenet.swift */,
+				EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				F7FBD06A27B9F596002265FD /* SettingFlow.swift in Sources */,
 				F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */,
 				EE1A164527F1C46500E87D4C /* NeedleGenerated.swift in Sources */,
+				EE28F6F627F825C700E0A906 /* MiddleFlowComponent.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
 				EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */,
 				F7A5B2AC27B6386E00152676 /* MainFlow.swift in Sources */,
