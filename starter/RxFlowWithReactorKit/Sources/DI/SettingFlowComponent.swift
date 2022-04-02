@@ -14,10 +14,15 @@ protocol SettingFlowDependency: Dependency {
 
 protocol SettingFlowComponentBuilder {
 	var flow: SettingFlow { get }
+	var builder: SettingComponentBuilder { get }
 }
 
 class SettingFlowComponent: Component<SettingFlowDependency>, SettingFlowComponentBuilder {
 	var flow: SettingFlow {
 		return SettingFlow(dependency: self, stepper: .init())
+	}
+	
+	var builder: SettingComponentBuilder {
+		return SettingComponent(parent: self)
 	}
 }
