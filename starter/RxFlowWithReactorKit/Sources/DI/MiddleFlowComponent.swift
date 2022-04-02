@@ -15,6 +15,7 @@ protocol MiddleFlowDependency: Dependency {
 protocol MiddleFlowComponentBuilder {
 	var flow: MiddleFlow { get }
 	var middleBuilder: MiddleComponentBuilder { get }
+	var detailBuilder: MiddleDetailComponentBuilder { get }
 }
 
 class MiddleFlowComponent: Component<MiddleFlowDependency>, MiddleFlowComponentBuilder {
@@ -24,5 +25,9 @@ class MiddleFlowComponent: Component<MiddleFlowDependency>, MiddleFlowComponentB
 	
 	var middleBuilder: MiddleComponentBuilder {
 		return MiddleComponent(parent: self)
+	}
+	
+	var detailBuilder: MiddleDetailComponentBuilder {
+		return MiddleDetailComponent(parent: self)
 	}
 }

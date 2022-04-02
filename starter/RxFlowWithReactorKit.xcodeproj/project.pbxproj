@@ -15,6 +15,7 @@
 		EE1A164927F1D86600E87D4C /* AppFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */; };
 		EE28F6F627F825C700E0A906 /* MiddleFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */; };
 		EE28F6F827F8281C00E0A906 /* MiddleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6F727F8281C00E0A906 /* MiddleComponent.swift */; };
+		EE28F6FA27F82AD900E0A906 /* MiddleDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6F927F82AD900E0A906 /* MiddleDetailComponent.swift */; };
 		EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */; };
 		EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */; };
 		EE4A181D27CB5B4D005752A7 /* HomeDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */; };
@@ -89,6 +90,7 @@
 		EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowComponent.swift; sourceTree = "<group>"; };
 		EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleFlowComponent.swift; sourceTree = "<group>"; };
 		EE28F6F727F8281C00E0A906 /* MiddleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleComponent.swift; sourceTree = "<group>"; };
+		EE28F6F927F82AD900E0A906 /* MiddleDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailComponent.swift; sourceTree = "<group>"; };
 		EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailReactor.swift; sourceTree = "<group>"; };
 		EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailViewController.swift; sourceTree = "<group>"; };
 		EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailReactor.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				EE6578C927F5F5AA0048F92D /* HomeFlowComponenet.swift */,
 				EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */,
 				EE28F6F727F8281C00E0A906 /* MiddleComponent.swift */,
+				EE28F6F927F82AD900E0A906 /* MiddleDetailComponent.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				F7FBD06627B9DF7B002265FD /* SettingReactor.swift in Sources */,
 				F7A5B2B427B63C6F00152676 /* HomeViewController.swift in Sources */,
 				F7A5B2AF27B63BB900152676 /* HomeFlow.swift in Sources */,
+				EE28F6FA27F82AD900E0A906 /* MiddleDetailComponent.swift in Sources */,
 				F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */,
 				F7A5B28327B5E05800152676 /* UIView+safeArea.swift in Sources */,
 				EE1A164927F1D86600E87D4C /* AppFlowComponent.swift in Sources */,
