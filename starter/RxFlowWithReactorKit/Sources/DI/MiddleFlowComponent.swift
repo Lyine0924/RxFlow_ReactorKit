@@ -14,10 +14,15 @@ protocol MiddleFlowDependency: Dependency {
 
 protocol MiddleFlowComponentBuilder {
 	var flow: MiddleFlow { get }
+	var middleBuilder: MiddleComponentBuilder { get }
 }
 
 class MiddleFlowComponent: Component<MiddleFlowDependency>, MiddleFlowComponentBuilder {
 	var flow: MiddleFlow {
 		return MiddleFlow(with: self, stepper: .init())
+	}
+	
+	var middleBuilder: MiddleComponentBuilder {
+		return MiddleComponent(parent: self)
 	}
 }

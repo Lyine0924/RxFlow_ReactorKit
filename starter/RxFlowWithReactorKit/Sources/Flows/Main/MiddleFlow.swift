@@ -76,11 +76,10 @@ final class MiddleFlow: Flow {
 
 private extension MiddleFlow {
 	func coordinateToMiddle() -> FlowContributors {
-		let reactor = MiddleReactor(provider: self.dependency.serviceBuilder.provider)
-		let vc = MiddleViewController(with: reactor)
+		let vc = self.dependency.middleBuilder.viewController
 		self.rootViewController.setViewControllers([vc], animated: true)
 		return .one(flowContributor: .contribute(withNextPresentable: vc,
-																						 withNextStepper: reactor))
+																						 withNextStepper: vc.reactor!))
 	}
 	
 	func coordinateToMiddleFirst() -> FlowContributors {
