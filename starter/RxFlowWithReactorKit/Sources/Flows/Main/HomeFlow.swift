@@ -16,6 +16,10 @@ struct HomeStepper: Stepper {
 	var initialStep: Step {
 		return SampleStep.homeIsRequired
 	}
+	
+	func readyToEmitSteps() {
+		debugPrint(self)
+	}
 }
 
 final class HomeFlow: Flow {
@@ -27,16 +31,17 @@ final class HomeFlow: Flow {
 	}
 	
 	let stepper: HomeStepper
-	private let provider: ServiceProviderType
 	private let rootViewController = UINavigationController()
 	
-	// MARK: Init
+	private let dependency: HomeFlowComponent
+	
+		// MARK: Init
 	
 	init(
-		with services: ServiceProviderType,
+		dependency: HomeFlowComponent,
 		stepper: HomeStepper
 	) {
-		self.provider = services
+		self.dependency = dependency
 		self.stepper = stepper
 	}
 	
@@ -44,7 +49,7 @@ final class HomeFlow: Flow {
 		print("\(type(of: self)): \(#function)")
 	}
 	
-	// MARK: Navigate
+		// MARK: Navigate
 	
 	func navigate(to step: Step) -> FlowContributors {
 		guard let step = step.asSampleStep else { return .none }
@@ -62,23 +67,21 @@ final class HomeFlow: Flow {
 	}
 }
 
-// MARK: - Extensions
+	// MARK: - Extensions
 
 private extension HomeFlow {
 	func coordinateToHome() -> FlowContributors {
-		let reactor = HomeReactor(provider: provider)
-		let viewController = HomeViewController(with: reactor)
+		let viewController = self.dependency.homeBuilder.homeViewController
 		
 		self.rootViewController.setViewControllers([viewController], animated: true)
 		
-		return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+		return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.reactor!))
 	}
 	
 	func coordinateToHomeDetail(with ID: String) -> FlowContributors {
-		let reactor = HomeDetailReactor(provider: provider)
-		let vc = HomeDetatilViewController(with: reactor, title: ID)
-		self.rootViewController.pushViewController(vc, animated: true)
-		return .one(flowContributor: .contribute(withNextPresentable: vc,
-																						 withNextStepper: reactor))
+		let viewController = self.dependency.homeDetailBuilder.makeDetailViewController(title: ID)
+		self.rootViewController.pushViewController(viewController, animated: true)
+		return .one(flowContributor: .contribute(withNextPresentable: viewController,
+																						 withNextStepper: viewController.reactor!))
 	}
 }

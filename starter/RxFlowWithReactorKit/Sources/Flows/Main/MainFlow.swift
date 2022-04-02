@@ -22,19 +22,15 @@ final class MainFlow: Flow {
 		return self.rootViewController
 	}
 	
-	struct Dependency {
-		let provider: ServiceProviderType
-	}
-	
 	let rootViewController = UITabBarController()
 	let homeFlow: HomeFlow
 	let middleFlow: MiddleFlow
 	let settingFlow: SettingFlow
 	
-	init(dependency: Dependency) {
-		self.homeFlow = .init(with: dependency.provider, stepper: .init())
-		self.middleFlow = .init(with: dependency.provider, stepper: .init())
-		self.settingFlow = .init(with: dependency.provider, stepper: .init())
+	init(dependency: MainFlowComponent) {
+		self.homeFlow = dependency.homeFlowBuilder.flow
+		self.middleFlow = dependency.middleFlowBuilder.flow
+		self.settingFlow = dependency.settingFlowBuilder.flow
 	}
 	
 	func navigate(to step: Step) -> FlowContributors {
@@ -55,7 +51,7 @@ final class MainFlow: Flow {
 	}
 }
 
-// MARK: - Extensions
+	// MARK: - Extensions
 
 extension MainFlow {
 	private func coordinateToMainTabBar() -> FlowContributors {

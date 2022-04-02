@@ -13,10 +13,18 @@
 		EE1A164527F1C46500E87D4C /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164427F1C46500E87D4C /* NeedleGenerated.swift */; };
 		EE1A164727F1D84500E87D4C /* ServiceProviderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */; };
 		EE1A164927F1D86600E87D4C /* AppFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */; };
+		EE28F6F627F825C700E0A906 /* MiddleFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */; };
+		EE28F6F827F8281C00E0A906 /* MiddleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6F727F8281C00E0A906 /* MiddleComponent.swift */; };
+		EE28F6FA27F82AD900E0A906 /* MiddleDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6F927F82AD900E0A906 /* MiddleDetailComponent.swift */; };
+		EE28F6FC27F82D0800E0A906 /* SettingFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6FB27F82D0800E0A906 /* SettingFlowComponent.swift */; };
+		EE28F6FE27F82E1900E0A906 /* SettingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE28F6FD27F82E1900E0A906 /* SettingComponent.swift */; };
 		EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */; };
 		EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */; };
 		EE4A181D27CB5B4D005752A7 /* HomeDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */; };
 		EE4A181F27CB5B6C005752A7 /* HomeDetatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181E27CB5B6C005752A7 /* HomeDetatilViewController.swift */; };
+		EE6578C627F5EDCF0048F92D /* LoginFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6578C527F5EDCF0048F92D /* LoginFlowComponent.swift */; };
+		EE6578C827F5F0460048F92D /* MainFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6578C727F5F0460048F92D /* MainFlowComponent.swift */; };
+		EE6578CA27F5F5AA0048F92D /* HomeFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6578C927F5F5AA0048F92D /* HomeFlowComponent.swift */; };
 		F741049027BB33B5002694E7 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741048F27BB33B5002694E7 /* HomeCell.swift */; };
 		F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22527B5DC8800152676 /* AppDelegate.swift */; };
 		F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22727B5DC8800152676 /* SceneDelegate.swift */; };
@@ -82,10 +90,18 @@
 		EE1A164427F1C46500E87D4C /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderComponent.swift; sourceTree = "<group>"; };
 		EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowComponent.swift; sourceTree = "<group>"; };
+		EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleFlowComponent.swift; sourceTree = "<group>"; };
+		EE28F6F727F8281C00E0A906 /* MiddleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleComponent.swift; sourceTree = "<group>"; };
+		EE28F6F927F82AD900E0A906 /* MiddleDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailComponent.swift; sourceTree = "<group>"; };
+		EE28F6FB27F82D0800E0A906 /* SettingFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFlowComponent.swift; sourceTree = "<group>"; };
+		EE28F6FD27F82E1900E0A906 /* SettingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingComponent.swift; sourceTree = "<group>"; };
 		EE4A181827CB56B5005752A7 /* MiddleDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailReactor.swift; sourceTree = "<group>"; };
 		EE4A181A27CB56F0005752A7 /* MiddleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleDetailViewController.swift; sourceTree = "<group>"; };
 		EE4A181C27CB5B4D005752A7 /* HomeDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailReactor.swift; sourceTree = "<group>"; };
 		EE4A181E27CB5B6C005752A7 /* HomeDetatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetatilViewController.swift; sourceTree = "<group>"; };
+		EE6578C527F5EDCF0048F92D /* LoginFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowComponent.swift; sourceTree = "<group>"; };
+		EE6578C727F5F0460048F92D /* MainFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowComponent.swift; sourceTree = "<group>"; };
+		EE6578C927F5F5AA0048F92D /* HomeFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowComponent.swift; sourceTree = "<group>"; };
 		F25C318A4F3C29B4BC5B6174 /* Pods-RxFlowWithReactorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKitTests.release.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKitTests/Pods-RxFlowWithReactorKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		F741048F27BB33B5002694E7 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F7A5B22227B5DC8800152676 /* RxFlowWithReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxFlowWithReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +209,14 @@
 				EE1A163F27F1BF6C00E87D4C /* RootComponent.swift */,
 				EE1A164627F1D84500E87D4C /* ServiceProviderComponent.swift */,
 				EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */,
+				EE6578C527F5EDCF0048F92D /* LoginFlowComponent.swift */,
+				EE6578C727F5F0460048F92D /* MainFlowComponent.swift */,
+				EE6578C927F5F5AA0048F92D /* HomeFlowComponent.swift */,
+				EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */,
+				EE28F6F727F8281C00E0A906 /* MiddleComponent.swift */,
+				EE28F6F927F82AD900E0A906 /* MiddleDetailComponent.swift */,
+				EE28F6FB27F82D0800E0A906 /* SettingFlowComponent.swift */,
+				EE28F6FD27F82E1900E0A906 /* SettingComponent.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -671,11 +695,14 @@
 				F7FBD06627B9DF7B002265FD /* SettingReactor.swift in Sources */,
 				F7A5B2B427B63C6F00152676 /* HomeViewController.swift in Sources */,
 				F7A5B2AF27B63BB900152676 /* HomeFlow.swift in Sources */,
+				EE28F6FA27F82AD900E0A906 /* MiddleDetailComponent.swift in Sources */,
 				F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */,
 				F7A5B28327B5E05800152676 /* UIView+safeArea.swift in Sources */,
 				EE1A164927F1D86600E87D4C /* AppFlowComponent.swift in Sources */,
 				F7FBD06827B9F36E002265FD /* SettingViewController.swift in Sources */,
+				EE28F6F827F8281C00E0A906 /* MiddleComponent.swift in Sources */,
 				EE1A164727F1D84500E87D4C /* ServiceProviderComponent.swift in Sources */,
+				EE6578CA27F5F5AA0048F92D /* HomeFlowComponent.swift in Sources */,
 				F7A5B28D27B5E07A00152676 /* NetworkManager.swift in Sources */,
 				F7A5B2A027B5EC2000152676 /* Step+asSample.swift in Sources */,
 				F7A5B2B227B63C3D00152676 /* HomeReactor.swift in Sources */,
@@ -683,8 +710,10 @@
 				EE1A164027F1BF6C00E87D4C /* RootComponent.swift in Sources */,
 				F7A5B2A927B6304D00152676 /* LoginFlow.swift in Sources */,
 				F7FBD06A27B9F596002265FD /* SettingFlow.swift in Sources */,
+				EE28F6FE27F82E1900E0A906 /* SettingComponent.swift in Sources */,
 				F7A5B29627B5E09F00152676 /* BaseService.swift in Sources */,
 				EE1A164527F1C46500E87D4C /* NeedleGenerated.swift in Sources */,
+				EE28F6F627F825C700E0A906 /* MiddleFlowComponent.swift in Sources */,
 				F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */,
 				EE4A181B27CB56F0005752A7 /* MiddleDetailViewController.swift in Sources */,
 				F7A5B2AC27B6386E00152676 /* MainFlow.swift in Sources */,
@@ -694,6 +723,8 @@
 				F741049027BB33B5002694E7 /* HomeCell.swift in Sources */,
 				F7A5B28827B5E05800152676 /* Models.swift in Sources */,
 				EE4A181F27CB5B6C005752A7 /* HomeDetatilViewController.swift in Sources */,
+				EE6578C827F5F0460048F92D /* MainFlowComponent.swift in Sources */,
+				EE6578C627F5EDCF0048F92D /* LoginFlowComponent.swift in Sources */,
 				F7A5B29E27B5E9ED00152676 /* AppFlow.swift in Sources */,
 				F7A5B29B27B5E17800152676 /* SampleStep.swift in Sources */,
 				F7A5B28527B5E05800152676 /* Observable+Extensions.swift in Sources */,
@@ -703,6 +734,7 @@
 				F7FBD06327B9CDE2002265FD /* MiddleFlow.swift in Sources */,
 				F7A5B29527B5E09F00152676 /* ServiceProvider.swift in Sources */,
 				EE4A181927CB56B5005752A7 /* MiddleDetailReactor.swift in Sources */,
+				EE28F6FC27F82D0800E0A906 /* SettingFlowComponent.swift in Sources */,
 				F7FBD06127B9C9E0002265FD /* MiddleViewController.swift in Sources */,
 				F7A5B29427B5E09F00152676 /* NetworkService.swift in Sources */,
 				F7A5B28427B5E05800152676 /* Cell+ReusableID.swift in Sources */,

@@ -29,18 +29,17 @@ struct AppStepper: Stepper {
 
 final class AppFlow: Flow {
 	var root: Presentable {
-		return self.rootWindow
+		return self.rootWindow!
 	}
 	
-	private let rootWindow: UIWindow
-	private let provider: ServiceProviderType
+	private let dependency: AppFlowComponent
+	
+	private var rootWindow: UIWindow?
 	
 	init(
-		with window: UIWindow,
-		and provider: ServiceProviderType
+		dependency: AppFlowComponent
 	) {
-		self.rootWindow = window
-		self.provider = provider
+		self.dependency = dependency
 	}
 	
 	deinit {
@@ -62,12 +61,11 @@ final class AppFlow: Flow {
 	
 	
 	private func coordinateToLoginVC() -> FlowContributors {
-		let loginFlow = LoginFlow(with: provider)
+		let loginFlow = self.dependency.loginBuidler.flow
 		
 		Flows.use(loginFlow, when: .created) { [unowned self] root in
-			self.rootWindow.rootViewController = root
+			self.rootWindow?.rootViewController = root
 		}
-		
 		
 		let nextStep = OneStepper(withSingleStep: SampleStep.loginIsRequired)
 		
@@ -76,14 +74,19 @@ final class AppFlow: Flow {
 	}
 	
 	private func coordinateToMainVC() -> FlowContributors {
-		let mainFlow = MainFlow(dependency: .init(provider: provider))
+		let mainFlow = self.dependency.mainBuilder.flow
 		
 		Flows.use(mainFlow, when: .created) { [unowned self] root in
-			self.rootWindow.rootViewController = root
+			self.rootWindow?.rootViewController = root
 		}
 		
 		let nextStep = OneStepper(withSingleStep: SampleStep.mainTabBarIsRequired)
 		
 		return .one(flowContributor: .contribute(withNextPresentable: mainFlow, withNextStepper: nextStep))
+	}
+	
+	func launch(from: UIWindow) {
+		self.rootWindow = from
+		self.rootWindow?.makeKeyAndVisible()
 	}
 }

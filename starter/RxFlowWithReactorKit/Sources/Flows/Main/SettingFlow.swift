@@ -26,15 +26,15 @@ final class SettingFlow: Flow {
 	private let rootViewController = UINavigationController()
 	let stepper: SettingStepper
 	
-	private let provider: ServiceProviderType
+	private let dependency: SettingFlowComponent
 	
 	// MARK: Init
 	
 	init(
-		with services: ServiceProviderType,
+		dependency: SettingFlowComponent,
 		stepper: SettingStepper
 	) {
-		self.provider = services
+		self.dependency = dependency
 		self.stepper = stepper
 	}
 	
@@ -64,11 +64,10 @@ final class SettingFlow: Flow {
 
 private extension SettingFlow {
 	func coordinateToSetting() -> FlowContributors {
-		let reactor = SettingReactor(provider: provider)
-		let vc = SettingViewController(with: reactor)
+		let vc = self.dependency.builder.viewController
 		self.rootViewController.setViewControllers([vc], animated: true)
 		return .one(flowContributor: .contribute(withNextPresentable: vc,
-																						 withNextStepper: reactor))
+																						 withNextStepper: vc.reactor!))
 	}
 	
 	func navigateToAlertScreen(message: String) -> FlowContributors {

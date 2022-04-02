@@ -19,8 +19,10 @@ protocol ServiceProviderBuilder {
 
 class ServiceComponent: Component<ServiceProviderDependency>, ServiceProviderBuilder {
   var provider: ServiceProviderType {
-    return ServiceProviderImpl(networkService: self.networkService,
-                               loginService: self.loginService)
+		shared {
+			ServiceProviderImpl(networkService: self.networkService,
+													loginService: self.loginService)
+		}
   }
   
   deinit {
