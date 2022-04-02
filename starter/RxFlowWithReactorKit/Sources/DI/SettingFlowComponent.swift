@@ -8,8 +8,16 @@
 import Foundation
 import NeedleFoundation
 
-protocol SettingFlowDependency: Dependency {}
+protocol SettingFlowDependency: Dependency {
+	var serviceBuilder: ServiceProviderBuilder { get }
+}
 
-protocol SettingFlowComponentBuilder {}
+protocol SettingFlowComponentBuilder {
+	var flow: SettingFlow { get }
+}
 
-class SettingFlowComponent: Component<SettingFlowDependency>, SettingFlowComponentBuilder {}
+class SettingFlowComponent: Component<SettingFlowDependency>, SettingFlowComponentBuilder {
+	var flow: SettingFlow {
+		return SettingFlow(dependency: self, stepper: .init())
+	}
+}

@@ -30,7 +30,7 @@ final class MainFlow: Flow {
 	init(dependency: MainFlowComponent) {
 		self.homeFlow = dependency.homeFlowBuilder.flow
 		self.middleFlow = dependency.middleFlowBuilder.flow
-		self.settingFlow = .init(with: dependency.serviceBuilder.provider, stepper: .init())
+		self.settingFlow = dependency.settingFlowBuilder.flow
 	}
 	
 	func navigate(to step: Step) -> FlowContributors {
