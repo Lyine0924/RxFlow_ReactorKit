@@ -17,6 +17,7 @@ protocol MainFlowComponentBuilder {
 	var flow: Flow { get }
 	var homeFlowBuilder: HomeFlowComponenetBuilder { get }
 	var middleFlowBuilder: MiddleFlowComponentBuilder { get }
+	var settingFlowBuilder: SettingFlowComponentBuilder { get }
 }
 
 class MainFlowComponent: Component<MainFlowDependency>, MainFlowComponentBuilder {
@@ -30,5 +31,9 @@ class MainFlowComponent: Component<MainFlowDependency>, MainFlowComponentBuilder
 	
 	var middleFlowBuilder: MiddleFlowComponentBuilder {
 		return MiddleFlowComponent(parent: self)
+	}
+	
+	var settingFlowBuilder: SettingFlowComponentBuilder {
+		return SettingFlowComponent(parent: self)
 	}
 }
