@@ -64,11 +64,10 @@ final class SettingFlow: Flow {
 
 private extension SettingFlow {
 	func coordinateToSetting() -> FlowContributors {
-		let reactor = SettingReactor(provider: self.dependency.serviceBuilder.provider)
-		let vc = SettingViewController(with: reactor)
+		let vc = self.dependency.builder.viewController
 		self.rootViewController.setViewControllers([vc], animated: true)
 		return .one(flowContributor: .contribute(withNextPresentable: vc,
-																						 withNextStepper: reactor))
+																						 withNextStepper: vc.reactor!))
 	}
 	
 	func navigateToAlertScreen(message: String) -> FlowContributors {

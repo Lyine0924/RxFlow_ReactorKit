@@ -8,8 +8,17 @@
 import Foundation
 import NeedleFoundation
 
-protocol SettingDependency: Dependency {}
+protocol SettingDependency: Dependency {
+	var serviceBuilder: ServiceProviderBuilder { get }
+}
 
-protocol SettingComponentBuilder {}
+protocol SettingComponentBuilder {
+	var viewController: SettingViewController { get }
+}
 
-class SettingComponent: Component<SettingDependency>, SettingComponentBuilder {}
+class SettingComponent: Component<SettingDependency>, SettingComponentBuilder {
+	var viewController: SettingViewController {
+		let reactor = SettingReactor(provider: self.dependency.serviceBuilder.provider)
+		return SettingViewController(with: reactor)
+	}
+}
