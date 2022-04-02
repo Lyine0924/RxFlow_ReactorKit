@@ -25,7 +25,7 @@ class HomeFlowComponent: Component<LoginFlowDependency>, HomeFlowComponentBuilde
 	}
 	
 	var homeBuilder: HomeComponentBuilder {
-		return HomeComponenet(parent: self)
+		return HomeComponent(parent: self)
 	}
 	
 	var homeDetailBuilder: HomeDetailBuilder {
@@ -41,7 +41,7 @@ protocol HomeComponentBuilder {
 	var homeViewController: HomeViewController { get }
 }
 
-class HomeComponenet: Component<HomeDependency>, HomeComponentBuilder {
+class HomeComponent: Component<HomeDependency>, HomeComponentBuilder {
 	var homeViewController: HomeViewController {
 		let reactor = HomeReactor(provider: self.dependency.serviceBuilder.provider)
 		return HomeViewController(with: reactor)
