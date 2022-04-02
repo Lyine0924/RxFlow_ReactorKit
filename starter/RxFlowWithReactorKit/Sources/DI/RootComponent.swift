@@ -9,14 +9,7 @@ import UIKit
 import NeedleFoundation
 
 class RootComponent: BootstrapComponent {
-  
-  var window: UIWindow
-  
-  init(window: UIWindow) {
-    self.window = window
-    super.init()
-  }
-  
+	
   var userDefaults: UserDefaults {
     return UserDefaults.standard
   }
