@@ -1,5 +1,5 @@
 //
-//  HomeFlowComponenet.swift
+//  HomeFlowComponent.swift
 //  RxFlowWithReactorKit
 //
 //  Created by Lyine on 2022/03/31.
@@ -13,13 +13,13 @@ protocol HomeFlowDependency: Dependency {
 	var serviceBuilder: ServiceProviderBuilder { get }
 }
 
-protocol HomeFlowComponenetBuilder {
+protocol HomeFlowComponentBuilder {
 	var flow: HomeFlow { get }
 	var homeBuilder: HomeComponentBuilder { get }
 	var homeDetailBuilder: HomeDetailBuilder { get }
 }
 
-class HomeFlowComponenet: Component<LoginFlowDependency>, HomeFlowComponenetBuilder {
+class HomeFlowComponent: Component<LoginFlowDependency>, HomeFlowComponentBuilder {
 	var flow: HomeFlow {
 		return HomeFlow(dependency: self, stepper: .init())
 	}

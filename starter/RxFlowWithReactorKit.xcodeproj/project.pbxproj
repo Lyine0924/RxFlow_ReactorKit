@@ -24,7 +24,7 @@
 		EE4A181F27CB5B6C005752A7 /* HomeDetatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A181E27CB5B6C005752A7 /* HomeDetatilViewController.swift */; };
 		EE6578C627F5EDCF0048F92D /* LoginFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6578C527F5EDCF0048F92D /* LoginFlowComponent.swift */; };
 		EE6578C827F5F0460048F92D /* MainFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6578C727F5F0460048F92D /* MainFlowComponent.swift */; };
-		EE6578CA27F5F5AA0048F92D /* HomeFlowComponenet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6578C927F5F5AA0048F92D /* HomeFlowComponenet.swift */; };
+		EE6578CA27F5F5AA0048F92D /* HomeFlowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6578C927F5F5AA0048F92D /* HomeFlowComponent.swift */; };
 		F741049027BB33B5002694E7 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741048F27BB33B5002694E7 /* HomeCell.swift */; };
 		F7A5B22627B5DC8800152676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22527B5DC8800152676 /* AppDelegate.swift */; };
 		F7A5B22827B5DC8800152676 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5B22727B5DC8800152676 /* SceneDelegate.swift */; };
@@ -101,7 +101,7 @@
 		EE4A181E27CB5B6C005752A7 /* HomeDetatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetatilViewController.swift; sourceTree = "<group>"; };
 		EE6578C527F5EDCF0048F92D /* LoginFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowComponent.swift; sourceTree = "<group>"; };
 		EE6578C727F5F0460048F92D /* MainFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowComponent.swift; sourceTree = "<group>"; };
-		EE6578C927F5F5AA0048F92D /* HomeFlowComponenet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowComponenet.swift; sourceTree = "<group>"; };
+		EE6578C927F5F5AA0048F92D /* HomeFlowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowComponent.swift; sourceTree = "<group>"; };
 		F25C318A4F3C29B4BC5B6174 /* Pods-RxFlowWithReactorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxFlowWithReactorKitTests.release.xcconfig"; path = "Target Support Files/Pods-RxFlowWithReactorKitTests/Pods-RxFlowWithReactorKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		F741048F27BB33B5002694E7 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		F7A5B22227B5DC8800152676 /* RxFlowWithReactorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxFlowWithReactorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,7 +211,7 @@
 				EE1A164827F1D86600E87D4C /* AppFlowComponent.swift */,
 				EE6578C527F5EDCF0048F92D /* LoginFlowComponent.swift */,
 				EE6578C727F5F0460048F92D /* MainFlowComponent.swift */,
-				EE6578C927F5F5AA0048F92D /* HomeFlowComponenet.swift */,
+				EE6578C927F5F5AA0048F92D /* HomeFlowComponent.swift */,
 				EE28F6F527F825C700E0A906 /* MiddleFlowComponent.swift */,
 				EE28F6F727F8281C00E0A906 /* MiddleComponent.swift */,
 				EE28F6F927F82AD900E0A906 /* MiddleDetailComponent.swift */,
@@ -702,7 +702,7 @@
 				F7FBD06827B9F36E002265FD /* SettingViewController.swift in Sources */,
 				EE28F6F827F8281C00E0A906 /* MiddleComponent.swift in Sources */,
 				EE1A164727F1D84500E87D4C /* ServiceProviderComponent.swift in Sources */,
-				EE6578CA27F5F5AA0048F92D /* HomeFlowComponenet.swift in Sources */,
+				EE6578CA27F5F5AA0048F92D /* HomeFlowComponent.swift in Sources */,
 				F7A5B28D27B5E07A00152676 /* NetworkManager.swift in Sources */,
 				F7A5B2A027B5EC2000152676 /* Step+asSample.swift in Sources */,
 				F7A5B2B227B63C3D00152676 /* HomeReactor.swift in Sources */,

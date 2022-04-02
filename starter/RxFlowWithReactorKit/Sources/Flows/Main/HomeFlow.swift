@@ -33,12 +33,12 @@ final class HomeFlow: Flow {
 	let stepper: HomeStepper
 	private let rootViewController = UINavigationController()
 	
-	private let dependency: HomeFlowComponenet
+	private let dependency: HomeFlowComponent
 	
 		// MARK: Init
 	
 	init(
-		dependency: HomeFlowComponenet,
+		dependency: HomeFlowComponent,
 		stepper: HomeStepper
 	) {
 		self.dependency = dependency
