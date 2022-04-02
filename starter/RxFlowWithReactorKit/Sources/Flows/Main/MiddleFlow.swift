@@ -91,11 +91,10 @@ private extension MiddleFlow {
 	}
 	
 	func presentMiddleDetail() -> FlowContributors {
-		let reactor = MiddleDetailReactor(provider: self.dependency.serviceBuilder.provider)
-		let vc = MiddleDetailViewContorller(with: reactor)
+		let vc = self.dependency.detailBuilder.viewController
 		self.rootViewController.visibleViewController?.present(vc, animated: true)
 		return .one(flowContributor: .contribute(withNextPresentable: vc,
-																						 withNextStepper: reactor))
+																						 withNextStepper: vc.reactor!))
 	}
 	
 	func dismissVC() -> FlowContributors {

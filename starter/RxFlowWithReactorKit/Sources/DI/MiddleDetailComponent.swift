@@ -12,8 +12,13 @@ protocol MiddleDetailDependency: Dependency {
 	var serviceBuilder: ServiceProviderBuilder { get }
 }
 
-protocol MiddleDetailComponentBuilder {}
+protocol MiddleDetailComponentBuilder {
+	var viewController: MiddleDetailViewContorller { get }
+}
 
 class MiddleDetailComponent: Component<MiddleDetailDependency>, MiddleDetailComponentBuilder {
-	
+	var viewController: MiddleDetailViewContorller {
+		let reactor = MiddleDetailReactor(provider: self.dependency.serviceBuilder.provider)
+		return MiddleDetailViewContorller(with: reactor)
+	}
 }
