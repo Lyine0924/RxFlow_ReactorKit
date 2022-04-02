@@ -123,7 +123,7 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-RxFlowWithReactorKit/Sources/DI//NeedleGenerated.swift
+starter/RxFlowWithReactorKit/Sources/DI/NeedleGenerated.swift
 
 ### Xcode ###
 # Xcode
